@@ -15,19 +15,14 @@
         body {
             /* Используется шрифт Montserrat для текста внутри body */
             font-family: 'Montserrat', sans-serif;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
 
         .content {
-            border: solid 1px;
-            background-color: #f5db483d;
+            height: 100vh;
             display: flex;
             justify-content: center;
+            align-items: center;
             flex-wrap: wrap;
-            align-content: center;
             padding: 10px;
             margin: 10px;
             gap: 30px;
@@ -67,7 +62,6 @@
             margin: 5px;
         }
 
-
         .price {
             margin: 5px;
             font-size: 25px;
@@ -86,10 +80,6 @@
         .button:hover {
             /* Изменение цвета фона кнопки при наведении */
             background-color: #12c1c7;
-        }
-
-        h2 {
-            text-align: center;
         }
 
         ul {
@@ -121,7 +111,6 @@
 </head>
 
 <body>
-    <h2>Подпишись!</h2>
     <div class="content">
         <div class="card" id="base">
             <h2>Базовая подписка</h2>
