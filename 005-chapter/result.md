@@ -9,8 +9,3 @@
 
 ![1](./arrays3.drawio.png)
 
----
-
-![1](./arrays4.drawio.png)
-
----
