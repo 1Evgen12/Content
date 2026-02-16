@@ -19,5 +19,5 @@ if (question3.toLowerCase() == answer3) {
 let question4 = prompt("Високосный год бывает раз в ...?\n1) 4 года.   2) 1 год.\n3) 3 года.   4) 5 лет.\nВведите ответ")
 if (question4.toLowerCase() == answer4 || question4.includes('4')) {
     count += 10;
-    alert(`Вы набрали ${count} баллов`);
 }
+alert(`Вы набрали ${count} баллов`);
