@@ -5,11 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Калькулятор чаевых</title>
-    <script src="./calculator.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+
 </head>
 
 <body>
+    <h1>Калькулятор чаевых</h1>
+    <div>
+        <div>
+            <label>Счет:</label>
+            <input type="number" value="5000" id="bill">
+        </div>
+        <div>
+            <label>Процент чаевых:</label>
+            <input type="number" value="5" id="percent">
+        </div>
+        <div>
+            <label>Количество человек:</label>
+            <input type="number" value="4" id="numberOfPeople">
+        </div>
+        <button id="Btn">Рассчитать</button>
+    </div>
+    <h1>Результаты</h1>
+    <div>
+        <p>Чаевые: <span id="tips"></span></p>
+        <p>Итого: <span id="totalAmount"></span></p>
+        <p>Сумма на человека: <span id="perPersonAmount"></span></p>
 
+    </div>
+    <script src="./calculator.js"></script>
 </body>
 
 </html>

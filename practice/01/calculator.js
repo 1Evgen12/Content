@@ -1,18 +1,26 @@
-let n = parseInt(prompt("Сколько человек платят? "));
-let price = parseInt(prompt("Введите счет: "))
-let percent = parseInt(prompt("Введите % чаевых: "));
+var calculateButton = document.getElementById("Btn");
 
-if (isNaN(n) || isNaN(price) || isNaN(percent) ||
-    n <= 0 || price <= 0 || percent < 0) {
-    alert("Ошибка ввода данных.")
-}
-else {
-    let tips = (percent / 100 * price);
+calculateButton.addEventListener("click", function () {
+    var n = parseInt(document.getElementById("numberOfPeople").value)
+    var bill = parseInt(document.getElementById("bill").value)
+    var percent = parseInt(document.getElementById("percent").value)
 
-    alert(`Счёт: ${price} руб.\n
-        Чаевые: ${tips} руб. (${percent}%)\n
-        Итого: ${price + tips} руб.\n
-        Количество человек: ${n}\n
-        С каждого: ${Math.round((price + tips) / n)} руб.`
-    )
-}
+    var s1 = document.getElementById('tips')
+    var s2 = document.getElementById('totalAmount')
+    var s3 = document.getElementById('perPersonAmount')
+
+    if (isNaN(n) || isNaN(bill) || isNaN(percent) ||
+        n <= 0 || bill <= 0 || percent < 0) {
+        alert("Ошибка ввода данных.")
+        return
+    }
+    else {
+        var tips = (percent / 100 * bill);
+        s1.innerText = tips.toFixed(2);
+        s2.innerText = (bill + tips).toFixed(2);
+        s3.innerText = ((bill + tips) / n).toFixed(2);
+    }
+});
+
+
+
