@@ -2,10 +2,10 @@ const ContentItem = (props) =>
     <div >
         {props.setOfLabels.map((item, index) =>
             <div className="card m-3" key={index}>
-                <img src={`https://picsum.photos/${200 + index}`} className="card-img-top" alt="..." />
+                <img src={`${props.image}${200 + index}/100`} className="card-img-top" alt="..." />
                 <div className="card-body">
-                    <h5 className="card-title">{item.cardTitle}</h5>
-                    <p className="card-text">{item.cardText}</p>
+                    <h5 className="card-title">{item.title}</h5>
+                    <p className="card-text">{item.body}</p>
                 </div>
             </div>)}
     </div>

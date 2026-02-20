@@ -4,7 +4,7 @@ import FooterItem from "./components/FooterItem"
 import HeaderItem from "./components/HeaderItem"
 import axios from 'axios'
 const baseUrl = "https://jsonplaceholder.typicode.com/posts";
-
+const imgUrl = "https://picsum.photos/"
 const HomePage = () => {
     const value = "Карточки";
     const [labels, setLabels] = useState([])
@@ -12,25 +12,16 @@ const HomePage = () => {
     useEffect(() => {
         axios.get(baseUrl)
             .then(res => {
-                const temp = [];
-                res.data.slice(0, 5).forEach(
-                    item => {
-                        temp.push(
-                            {
-                                id: item.id,
-                                cardTitle: item.title.slice(0, 10),
-                                cardText: item.body.slice(0, 50),
-                            }
-                        )
-                    }
-                );
-                setLabels(temp)
+                setLabels(res.data.slice(0, 5))
             })
     });
 
     return <div className="container col-10">
         <HeaderItem headerText={value} />
-        <ContentItem setOfLabels={labels} />
+        <ContentItem
+            setOfLabels={labels}
+            image={imgUrl}
+        />
         <FooterItem />
     </div>
 }
